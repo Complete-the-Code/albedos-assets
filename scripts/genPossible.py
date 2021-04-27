@@ -1,7 +1,5 @@
 #  Copyright (c) 2021. tooboredtocode
-#
 #  All Rights Reserved
-#
 
 import json
 
