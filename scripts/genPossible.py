@@ -33,6 +33,8 @@ def gen_possible(input_dict: dict, input_int: int) -> dict:
         }
     else:
         return {
+            "key": input_dict["key"],
+            "list": sorted(possible_list),
             "words": possible_ints
         }
 
