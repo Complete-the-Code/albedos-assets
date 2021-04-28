@@ -41,13 +41,13 @@ if __name__ == "__main__":
     with open("../files/words.json", "r") as read_file:
         data = json.load(read_file)
 
-    letters = "ACDDEEEHOORSTTW"
+    letters = "ACDDEEEHOORSTTTW"
     fact_letters = int(reduce(lambda x, y: y * x, (sorted(list(data["key"][i.upper()] for i in letters)))))
 
     output = gen_possible(data, fact_letters)
 
-    disable_this_if_sure = 0
-    file = "possible-alt.json" if disable_this_if_sure else "possible.json"
+    disable_this_if_sure = 1
+    file = "../files/possible-alt.json" if disable_this_if_sure else "../files/possible.json"
 
     with open(file, "w") as write_file:
         json.dump(output, write_file)
